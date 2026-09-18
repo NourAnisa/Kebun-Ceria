@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244b37">
+  <meta name="description" content="Game berkebun 2D untuk mempelajari navigasi gameplay, asset, dan progresi level. Tanam, siram, panen, dan selesaikan pesanan.">
+  <title>Kebun Ceria — Tanam hari yang menyenangkan</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="engine.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="#" id="brand">🌿 Kebun Ceria<span>STI7356 · PERTEMUAN 3</span></a><button id="menuButton" hidden>Jeda & menu</button></header>
+  <main>
+    <section id="welcome" class="welcome">
+      <div class="intro"><p class="eyebrow">SEPETAK TANAH, BANYAK CERITA</p><h1>Panen kecil.<br>Kebahagiaan besar.</h1><p>Rawat kebun pertamamu. Tanam benih, beri air, dan kirim hasil panen ke pasar. Setiap level membawa cerita baru.</p><div class="actions"><button class="primary" id="start">Mulai berkebun ↗</button><button id="continue" hidden>Lanjutkan kebun</button><button id="guide">Cara bermain</button></div><p class="note">Tanpa instalasi · Klik atau sentuh · 3 level</p></div>
+      <div class="postcard" aria-label="Ilustrasi kebun"><div class="sun">☀</div><div class="house">🏡</div><div class="crop-row">🥕 🌱 🥕</div><div class="crop-row">🌱 🍅 🌱</div><div class="crop-row">🌽 🌱 🌽</div><span class="stamp">DARI KEBUN<br>DENGAN CINTA</span></div>
+    </section>
+    <section id="game" hidden>
+      <div class="game-heading"><div><p class="eyebrow" id="chapter"></p><h1 id="levelTitle"></h1></div><div class="stats"><span>🪙 <b id="coins"></b> koin</span><span>💧 <b id="water"></b>/6</span></div></div>
+      <div class="layout"><section class="garden-card"><div class="field-top"><span>☀ Musim cerah</span><span>9 petak tersedia</span></div><div id="plots" class="plots" aria-label="Petak kebun"></div><p class="hint">Klik petak kosong untuk menanam. Klik lagi untuk menyiram, lalu panen saat matang.</p></section>
+        <aside><section class="side-card"><p class="eyebrow">KERANJANG BENIH</p><h2>Pilih tanaman</h2><div id="seeds"></div><button id="shopButton" class="wide">Kunjungi toko benih ↗</button><button id="refill" class="wide">💧 Isi air di sumur · gratis</button></section><section class="side-card order"><p class="eyebrow">PESANAN PASAR</p><h2>Target panen</h2><p class="note">Jumlah panen kumulatif sejak awal permainan.</p><div id="goals"></div><button id="next" class="primary wide" disabled>Lanjut level</button></section></aside></div>
+      <p id="message" class="message" role="status" aria-live="polite">Selamat datang di kebun!</p>
+    </section>
+    <section class="lesson"><p class="eyebrow">BELAJAR SAMBIL BERMAIN</p><div><article><h3>01 / Navigasi</h3><p>Menu, kebun, toko, dan hasil permainan saling terhubung.</p></article><article><h3>02 / Asset</h3><p>Tanaman, petak, tombol, dan indikator air menyampaikan keadaan game.</p></article><article><h3>03 / Level</h3><p>Wortel membuka jalan ke tomat, jagung, dan pesanan yang lebih beragam.</p></article></div></section>
+  </main><footer>KEBUN CERIA · Prototype pembelajaran game 2D</footer>
+  <dialog id="dialog"><button id="close" class="close" aria-label="Tutup dialog">✕</button><div id="dialogContent"></div></dialog>
+</body>
+</html>
